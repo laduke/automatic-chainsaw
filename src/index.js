@@ -5,6 +5,9 @@ import { Provider } from 'react-redux';
 import App from './App';
 import './index.css';
 import store from './store';
+import {fetchBuoys} from './actions/index';
+
+store.dispatch(fetchBuoys());
 
 ReactDOM.render(
     <Provider store={store}>

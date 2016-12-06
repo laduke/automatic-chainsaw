@@ -16,6 +16,7 @@
     "react-redux": "^4.4.6",
     "react-scripts": "^0.8.1",
     "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "request": "^2.79.0",
     "sanctuary": "^0.11.1",
     "supertest": "^2.0.1",
