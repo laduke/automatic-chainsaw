@@ -1,5 +1,5 @@
 var request = require('supertest');
-var app = require('./server');
+var app = require('../server');
 
 //test sometimes times out on travis-ci
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; //eslint-disable-line no-undef

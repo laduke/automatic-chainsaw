@@ -4320,7 +4320,7 @@ react-dom@^15.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-react-scripts@0.8.1:
+react-scripts:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-0.8.1.tgz#35d7528e980af14e0d0defcec3d89ead2a12bf87"
   dependencies:
