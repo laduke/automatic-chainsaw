@@ -17,7 +17,7 @@ describe('National Data Buoy Center API cleaner', () => {
       error => console.error(error), //eslint-disable-line no-console
       data => {
         result = data;
-        exampleItem = result.item[0];
+        exampleItem = result.item['44025'];
         exampleDescription = exampleItem.description;
         done();
       }
@@ -44,8 +44,8 @@ describe('National Data Buoy Center API cleaner', () => {
   });
 
   describe('Items list', () => {
-    it('Is a list of objects', () => {
-      expect(result.item.length).toBeGreaterThan(1);
+    it('Is a dictionary', () => {
+      expect(Object.keys(exampleItem).length).toBeGreaterThan(1);
       expect(exampleItem).toBeInstanceOf(Object);
     });
   });
