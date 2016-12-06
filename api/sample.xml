@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="/rss/ndbcrss.xsl"?>
+<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NDBC - Station Observations near 40N 73W</title>
+    <description><![CDATA[This feed shows recent marine weather observations from NDBC and its partners within 35 nautical miles of 40N 73W.]]></description>
+    <link>http://www.ndbc.noaa.gov/</link>
+    <pubDate>Sat, 03 Dec 2016 20:02:58 +0000</pubDate>
+    <lastBuildDate>Sat, 03 Dec 2016 20:02:58 +0000</lastBuildDate>
+    <ttl>5</ttl>
+    <language>en-us</language>
+    <managingEditor>webmaster.ndbc@noaa.gov (NDBC Webmaster)</managingEditor>
+    <webMaster>webmaster.ndbc@noaa.gov (NDBC Webmaster)</webMaster>
+    <image>
+      <url>http://www.ndbc.noaa.gov/images/noaa_nws_xml_logo.gif</url>
+      <title>NDBC - Station Observations near 40N 73W</title>
+      <link>http://www.ndbc.noaa.gov/</link>
+    </image>
+    <atom:link href="http://www.ndbc.noaa.gov/rss/ndbc_obs_search.php?lat=40N&amp;lon=73W&amp;radius=35" rel="self" type="application/rss+xml" />
+    <item>
+      <pubDate>Sat, 03 Dec 2016 20:02:58 +0000</pubDate>
+      <title>Station 44025 - LONG ISLAND - 30 NM SOUTH OF ISLIP, NY</title>
+      <description><![CDATA[
+        <strong>December 3, 2016 1:50 pm EST</strong><br />
+        <strong>Location:</strong> 40.251N 73.164W or 17 nautical miles NNW of search location of 40N 73W.<br />
+        <strong>Wind Direction:</strong> NW (310&#176;)<br />
+        <strong>Wind Speed:</strong> 25 knots<br />
+        <strong>Wind Gust:</strong> 29 knots<br />
+        <strong>Significant Wave Height:</strong> 5 ft<br />
+        <strong>Dominant Wave Period:</strong> 5 sec<br />
+        <strong>Average Period:</strong> 4.3 sec<br />
+        <strong>Mean Wave Direction:</strong> WNW (283&#176;)<br />
+        <strong>Atmospheric Pressure:</strong> 29.98 in (1015.2 mb)<br />
+        <strong>Pressure Tendency:</strong> +0.00 in (+0.0 mb)<br />
+        <strong>Air Temperature:</strong> 47&#176;F (8.2&#176;C)<br />
+        <strong>Water Temperature:</strong> 54&#176;F (12.1&#176;C)<br />
+      ]]></description>
+      <link>http://www.ndbc.noaa.gov/station_page.php?station=44025</link>
+      <guid isPermaLink="false">NDBC-44025-20161203185000</guid>
+      <georss:point>40.251 -73.164</georss:point>
+    </item>
+    <item>
+      <pubDate>Sat, 03 Dec 2016 20:02:57 +0000</pubDate>
+      <title>Station 44066 - TEXAS TOWER #4 - 75 NM EAST OF LONG BEACH, NJ</title>
+      <description><![CDATA[
+        <strong>December 3, 2016 1:50 pm EST</strong><br />
+        <strong>Location:</strong> 39.568N 72.586W or 32 nautical miles SE of search location of 40N 73W.<br />
+        <strong>Significant Wave Height:</strong> 9 ft<br />
+        <strong>Dominant Wave Period:</strong> 7 sec<br />
+        <strong>Average Period:</strong> 5.7 sec<br />
+        <strong>Mean Wave Direction:</strong> NW (304&#176;)<br />
+        <strong>Atmospheric Pressure:</strong> 29.96 in (1014.5 mb)<br />
+        <strong>Pressure Tendency:</strong> -0.02 in (-0.6 mb)<br />
+        <strong>Air Temperature:</strong> 49&#176;F (9.3&#176;C)<br />
+        <strong>Water Temperature:</strong> 59&#176;F (14.8&#176;C)<br />
+      ]]></description>
+      <link>http://www.ndbc.noaa.gov/station_page.php?station=44066</link>
+      <guid isPermaLink="false">NDBC-44066-20161203185000</guid>
+      <georss:point>39.568 -72.586</georss:point>
+    </item>
+</channel>
+</rss>
