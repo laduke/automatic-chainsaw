@@ -73,7 +73,8 @@ const cleanItem = item => {
 };
 
 const cleanItemList = R.pipe(
-  R.map(cleanItem)
+  R.map(cleanItem),
+  R.indexBy(R.prop('id'))
 );
 
 const cleanFeed = data => {
