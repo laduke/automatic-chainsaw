@@ -1,4 +1,4 @@
-import Future from 'fluture';
+import {Future} from 'ramda-fantasy';
 
 
 export const fetchJson = URI => {
