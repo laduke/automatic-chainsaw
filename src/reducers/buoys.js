@@ -38,7 +38,7 @@ export const header = (state = {}, action) => {
   }
 };
 
-export const stations = (state = [], action) => {
+export const stations = (state = {}, action) => {
   switch (action.type) {
   case BUOYS_SUCCESS: {
     return R.path(['payload','item'])(action);
