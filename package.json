@@ -13,7 +13,9 @@
     "ramda": "^0.22.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
     "react-scripts": "^0.8.1",
+    "redux": "^3.6.0",
     "request": "^2.79.0",
     "sanctuary": "^0.11.1",
     "supertest": "^2.0.1",
@@ -24,6 +26,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postinstall" : "npm run build"
+    "postinstall": "npm run build"
   }
 }
