@@ -36,3 +36,23 @@ export const fetchBuoys = (URL = BUOY_URL) => {
     );
   };
 };
+
+export const TOGGLE_FAVORITE = 'TOGGLE_FAVORITE';
+
+export const toggleFavorite = id => {
+  return {
+    type: TOGGLE_FAVORITE,
+    payload: id
+  };
+};
+
+export const SHOW_ALL = 'SHOW_ALL';
+export const SHOW_FAVORITE = 'SHOW_FAVORITE';
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
+
+export const setVisibilityFilter = (filter) => {
+  return {
+    type: SET_VISIBILITY_FILTER,
+    payload: filter
+  };
+};
