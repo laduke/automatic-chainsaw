@@ -7,7 +7,7 @@ import {
   BUOYS_FAILURE
 } from '../actions/index';
 
-export const requests = (state = false, action) => {
+export const loading = (state = false, action) => {
   switch (action.type) {
     case BUOYS_REQUEST: {
       return true;
@@ -53,7 +53,7 @@ export const stations = (state = [], action) => {
 };
 
 const buoys = combineReducers({
-  requests,
+  loading,
   header,
   stations
 });
