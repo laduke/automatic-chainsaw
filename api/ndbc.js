@@ -24,7 +24,7 @@ const splitOnFirstColon = R.pipe(
 //'Location: 40.251N...' -> {Location: '40.251N...'}
 const hasHeader = R.test(/^\D*: /);
 
-const descriptionTextToObject = S.ifElse(
+const descriptionTextToPair= S.ifElse(
   hasHeader,
   splitOnFirstColon,
   R.pair('Timestamp')
@@ -40,7 +40,7 @@ const cleanupDescriptionText = R.pipe(
 
 const cleanupDescriptions = R.pipe(
   cleanupDescriptionText,
-  R.map(descriptionTextToObject),
+  R.map(descriptionTextToPair),
   R.fromPairs
 );
 
