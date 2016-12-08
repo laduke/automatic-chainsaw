@@ -4,7 +4,9 @@ import { combineReducers } from 'redux';
 import {
   BUOYS_REQUEST,
   BUOYS_SUCCESS,
-  BUOYS_FAILURE
+  BUOYS_FAILURE,
+  TOGGLE_FAVORITE,
+  SET_VISIBILITY_FILTER
 } from '../actions/index';
 
 export const loading = (state = false, action) => {
@@ -52,10 +54,27 @@ export const stations = (state = {}, action) => {
   }
 };
 
+export const userData = (state = {}, action) => {
+  switch (action.type) {
+  case TOGGLE_FAVORITE: {
+    const idLens = R.lensPath(['stations', action.payload, 'favorite']);
+
+    return R.over(idLens, R.not, state);
+  }
+  case SET_VISIBILITY_FILTER: {
+    return R.assoc('visibilityFilter', action.payload, state);
+  }
+  default: {
+    return state;
+  }
+  }
+};
+
 const buoys = combineReducers({
   loading,
   header,
-  stations
+  stations,
+  userData
 });
 
 export default buoys;
