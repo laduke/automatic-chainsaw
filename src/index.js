@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import App from './App';
-import './index.css';
+import App from './components/App';
+import './public/index.css';
 import store from './store';
 import {fetchBuoys} from './actions/index';
 

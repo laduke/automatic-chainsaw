@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import ConnectedHeader from './components/Header';
-import ConnectedStations from './components/Stations';
+import '../public/App.css';
+import ConnectedHeader from './Header';
+import ConnectedStations from './Stations';
 
 
 const App = () => {
