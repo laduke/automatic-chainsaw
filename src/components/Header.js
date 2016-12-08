@@ -10,9 +10,9 @@ const highlight = (a, b) => {
   return a === b ? {backgroundColor: 'teal'} : {};
 };
 
-const ReadyHeader = ({state}) => {
+const Header = (state) => {
   const {description, pubDate, title} = state.header;
-  const {onFilterClick} = state;
+  const {onFilterClick, loading} = state;
   const {visibilityFilter} = state.userData;
 
   return (
@@ -28,14 +28,17 @@ const ReadyHeader = ({state}) => {
         style={highlight(visibilityFilter, SHOW_FAVORITE)}
         onClick={() => onFilterClick(SHOW_FAVORITE)}>show favorites </span>
       </p>
+      <Loading loading={loading}/>
     </div>
     );
 };
 
-const Header = (state) => {
-  const {loading} = state;
-
-  return loading ? <h3>Loading</h3> : <ReadyHeader state={state}/>;
+const Loading = ({loading}) => {
+  if(loading) {
+    return <h4 style={{position: 'fixed', top: 0, right: 10}}> loading </h4>;
+  } else {
+    return null; 
+  }
 };
 
 const mapStateToProps = ({buoys}) => {
