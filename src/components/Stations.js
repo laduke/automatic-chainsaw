@@ -70,10 +70,10 @@ const getVisibleStations = (buoys) => {
   )(buoys);
 };
 
-const mapStateToProps = ({buoys}) => (
+const mapStateToProps = ({ndbc}) => (
   {
-    stations: getVisibleStations(buoys),
-    userData: buoys.userData
+    stations: getVisibleStations(ndbc),
+    userData: ndbc.userData
   }
 );
 
