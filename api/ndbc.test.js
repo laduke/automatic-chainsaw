@@ -71,7 +71,7 @@ describe('National Data Buoy Center API cleaner', () => {
 
   describe('An item description', () => {
     it('Has a timestamp', () => {
-      expect(typeof exampleDescription.timestamp === 'string').toBeTruthy();
+      expect(typeof exampleDescription.Timestamp === 'string').toBeTruthy();
     });
     it('Has a Location', () => {
       expect(typeof exampleDescription.Location === 'string').toBeTruthy();

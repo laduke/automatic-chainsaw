@@ -27,7 +27,7 @@ const hasHeader = R.test(/^\D*: /);
 const descriptionTextToObject = S.ifElse(
   hasHeader,
   splitOnFirstColon,
-  R.pair('timestamp')
+  R.pair('Timestamp')
 );
 
 const cleanupDescriptionText = R.pipe(
