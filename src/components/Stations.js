@@ -48,21 +48,26 @@ const StationList = R.pipe(
   Container
 );
 
-const getFavoriteBuoys = (stations, filter) => {
+const filterStations = R.curry((filter, stations) => {
   switch (filter) {
   case 'SHOW_FAVORITE':
     return R.filter(R.prop('favorite'), stations);
   default: { return stations; }
   }
-};
+});
 
 const mergeLocal = (buoys) => {
   return R.mergeWith(R.merge, buoys.userData.stations, buoys.stations);
 };
 
 const getVisibleStations = (buoys) => {
-  const merged = mergeLocal(buoys);
-  return getFavoriteBuoys(merged, buoys.userData.visibilityFilter);
+  const filter = buoys.userData.visibilityFilter;
+  return R.pipe(
+    mergeLocal,
+    filterStations(filter),
+    R.values,
+    R.sortBy(R.prop('title'))
+  )(buoys);
 };
 
 const mapStateToProps = ({buoys}) => (
