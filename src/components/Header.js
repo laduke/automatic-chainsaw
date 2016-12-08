@@ -41,8 +41,8 @@ const Loading = ({loading}) => {
   }
 };
 
-const mapStateToProps = ({buoys}) => {
-  const {loading, header, userData} = buoys;
+const mapStateToProps = ({ndbc}) => {
+  const {loading, header, userData} = ndbc;
   return {
     loading,
     header,

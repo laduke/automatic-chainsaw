@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import buoys from './buoys';
+import ndbc from './ndbc';
 
 let reducers = combineReducers({
-  buoys
+  ndbc
 });
 
 

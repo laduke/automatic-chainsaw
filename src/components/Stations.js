@@ -56,24 +56,24 @@ const filterStations = R.curry((filter, stations) => {
   }
 });
 
-const mergeLocal = (buoys) => {
-  return R.mergeWith(R.merge, buoys.userData.stations, buoys.stations);
+const mergeLocal = (ndbc) => {
+  return R.mergeWith(R.merge, ndbc.userData.stations, ndbc.stations);
 };
 
-const getVisibleStations = (buoys) => {
-  const filter = buoys.userData.visibilityFilter;
+const getVisibleStations = (ndbc) => {
+  const filter = ndbc.userData.visibilityFilter;
   return R.pipe(
     mergeLocal,
     filterStations(filter),
     R.values,
     R.sortBy(R.prop('title'))
-  )(buoys);
+  )(ndbc);
 };
 
-const mapStateToProps = ({buoys}) => (
+const mapStateToProps = ({ndbc}) => (
   {
-    stations: getVisibleStations(buoys),
-    userData: buoys.userData
+    stations: getVisibleStations(ndbc),
+    userData: ndbc.userData
   }
 );
 

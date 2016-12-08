@@ -75,11 +75,11 @@ export const userData = (state = initialFilter, action) => {
   }
 };
 
-const buoys = combineReducers({
+const ndbc = combineReducers({
   loading,
   header,
   stations,
   userData
 });
 
-export default buoys;
+export default ndbc;

@@ -24,10 +24,10 @@ const splitOnFirstColon = R.pipe(
 //'Location: 40.251N...' -> {Location: '40.251N...'}
 const hasHeader = R.test(/^\D*: /);
 
-const descriptionTextToObject = S.ifElse(
+const descriptionTextToPair= S.ifElse(
   hasHeader,
   splitOnFirstColon,
-  R.pair('timestamp')
+  R.pair('Timestamp')
 );
 
 const cleanupDescriptionText = R.pipe(
@@ -38,9 +38,9 @@ const cleanupDescriptionText = R.pipe(
   R.reject(R.isEmpty)
 );
 
-const evolveDescriptions = R.pipe(
+const cleanupDescriptions = R.pipe(
   cleanupDescriptionText,
-  R.map(descriptionTextToObject),
+  R.map(descriptionTextToPair),
   R.fromPairs
 );
 
@@ -57,7 +57,7 @@ const cleanItem = item => {
   const transformations = {
     title: unwrap,
     pubDate: unwrap,
-    description: evolveDescriptions
+    description: cleanupDescriptions
   };
   const only = R.pick([
     'title',
