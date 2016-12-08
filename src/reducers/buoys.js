@@ -2,6 +2,7 @@ import R from 'ramda';
 import { combineReducers } from 'redux';
 
 import {
+  SHOW_ALL,
   BUOYS_REQUEST,
   BUOYS_SUCCESS,
   BUOYS_FAILURE,
@@ -54,7 +55,11 @@ export const stations = (state = {}, action) => {
   }
 };
 
-export const userData = (state = {}, action) => {
+const initialFilter = {
+  visibilityFilter: SHOW_ALL
+};
+
+export const userData = (state = initialFilter, action) => {
   switch (action.type) {
   case TOGGLE_FAVORITE: {
     const idLens = R.lensPath(['stations', action.payload, 'favorite']);
