@@ -5,7 +5,7 @@ import { toggleFavorite } from '../actions';
 
 
 const Container = children => (<ul>{children}</ul>);
-const Star = b => b ? <span>&#x2605;</span> : <span>&#x2606;</span>;
+const Star = b => b ? <span>&#x2605; </span> : <span>&#x2606; </span>;
 
 const StationData = (val, key, obj) => {
   return (
