@@ -17,7 +17,7 @@ const StationData = (val, key, obj) => {
 
 const PropertyList = R.pipe(
   R.prop('description'),
-  R.pick(['Location', 'Significant Wave Height', 'Average Period']),
+  R.pick(['Location', 'Significant Wave Height', 'Average Period', 'Water Temperature']),
   R.mapObjIndexed(StationData),
   R.values,
   Container
