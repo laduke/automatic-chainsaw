@@ -38,7 +38,7 @@ const cleanupDescriptionText = R.pipe(
   R.reject(R.isEmpty)
 );
 
-const evolveDescriptions = R.pipe(
+const cleanupDescriptions = R.pipe(
   cleanupDescriptionText,
   R.map(descriptionTextToObject),
   R.fromPairs
@@ -57,7 +57,7 @@ const cleanItem = item => {
   const transformations = {
     title: unwrap,
     pubDate: unwrap,
-    description: evolveDescriptions
+    description: cleanupDescriptions
   };
   const only = R.pick([
     'title',
