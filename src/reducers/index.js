@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import buoys from './reducers/buoys';
+import buoys from './buoys';
 
 let reducers = combineReducers({
   buoys
