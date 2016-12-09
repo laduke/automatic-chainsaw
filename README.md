@@ -3,7 +3,10 @@
 # A Buoy Data React/Redux demo app
 https://afternoon-depths-74711.herokuapp.com/
 
-## Provides the ability to quickly favorite and list buoy stations within 100 nautical miles of lat=40N and long=73W
+## Provides the ability to quickly favorite and list buoy stations within 100 nautical miles of latitude 40N and longitude 73W
+
+# Screenshot
+![dec-07-2016 21-40-03](https://cloud.githubusercontent.com/assets/11598/20998899/d2d0cc0c-bcc5-11e6-8bce-2962e9b1eaa8.gif)
 
 ### Here is the rss feed with buoy information:
 http://www.ndbc.noaa.gov/rss/ndbc_obs_search.php?lat=40N&lon=73W&radius=100
@@ -19,6 +22,3 @@ http://www.ndbc.noaa.gov/rss_access.shtml
 - the start script should automatically open http://localhost:3000/ in a browser
 - I used node 6.9.1 (`nvm use --lts`)
 
-# Screenshot
- 
-![dec-07-2016 21-40-03](https://cloud.githubusercontent.com/assets/11598/20998899/d2d0cc0c-bcc5-11e6-8bce-2962e9b1eaa8.gif)
