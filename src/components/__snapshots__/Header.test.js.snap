@@ -1,0 +1,70 @@
+exports[`test Description renders 1`] = `
+<p>
+  Hello, this is the description
+</p>
+`;
+
+exports[`test FilterLinks render with feedback 1`] = `
+<p>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "teal",
+      }
+    }>
+    show all 
+  </span>
+  <span
+    onClick={[Function]}
+    style={Object {}}>
+    show favorites 
+  </span>
+</p>
+`;
+
+exports[`test FilterLinks render with feedback 2`] = `
+<p>
+  <span
+    onClick={[Function]}
+    style={Object {}}>
+    show all 
+  </span>
+  <span
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "teal",
+      }
+    }>
+    show favorites 
+  </span>
+</p>
+`;
+
+exports[`test Loading appears when buoy data is loading 1`] = `
+<h4
+  style={
+    Object {
+      "position": "fixed",
+      "right": 10,
+      "top": 0,
+    }
+  }>
+   loading 
+</h4>
+`;
+
+exports[`test Loading appears when buoy data is loading 2`] = `null`;
+
+exports[`test Publication Date renders 1`] = `
+<p>
+  Fri, 09 Dec 2016 00:16:24 +0000
+</p>
+`;
+
+exports[`test Title renders 1`] = `
+<h3>
+  NDBC - Station Observations near 40N 73W
+</h3>
+`;

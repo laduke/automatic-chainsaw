@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.1"
+    "react-scripts": "0.8.1",
+    "react-test-renderer": "^15.4.1"
   },
   "proxy": "http://localhost:3001",
   "dependencies": {

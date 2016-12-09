@@ -10,6 +10,20 @@ const highlight = (a, b) => {
   return a === b ? {backgroundColor: 'teal'} : {};
 };
 
+export const Description = ({description}) => <p>{description}</p>;
+export const PublicationDate = ({pubDate}) => <p>{pubDate}</p>;
+export const Title = ({title}) => <h3>{title}</h3>; 
+export const FilterLinks = ({visibilityFilter, onFilterClick}) => (
+  <p>
+    <span
+      style={highlight(visibilityFilter, SHOW_ALL)}
+      onClick={() => onFilterClick(SHOW_ALL)}>show all </span>
+    <span
+      style={highlight(visibilityFilter, SHOW_FAVORITE)}
+      onClick={() => onFilterClick(SHOW_FAVORITE)}>show favorites </span>
+  </p>
+);
+
 const Header = (state) => {
   const {description, pubDate, title} = state.header;
   const {onFilterClick, loading} = state;
@@ -17,23 +31,18 @@ const Header = (state) => {
 
   return (
     <div>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{pubDate}</p>
-      <p>
-      <span
-        style={highlight(visibilityFilter, SHOW_ALL)}
-        onClick={() => onFilterClick(SHOW_ALL)}>show all </span>
-      <span
-        style={highlight(visibilityFilter, SHOW_FAVORITE)}
-        onClick={() => onFilterClick(SHOW_FAVORITE)}>show favorites </span>
-      </p>
+      <Title title={title} />
+      <Description description={description} />
+      <PublicationDate pubDate={pubDate} />
+      <FilterLinks
+        visibilityFilter={visibilityFilter}
+        onFilterClick={onFilterClick} />
       <Loading loading={loading}/>
     </div>
     );
 };
 
-const Loading = ({loading}) => {
+export const Loading = ({loading}) => {
   if(loading) {
     return <h4 style={{position: 'fixed', top: 0, right: 10}}> loading </h4>;
   } else {
